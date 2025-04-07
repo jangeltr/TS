@@ -23,4 +23,15 @@ function getValue2<Tipo1, Tipo2>(value1: Tipo1, value2: Tipo2) {
     return value1;
 }
 
-getValue2<number, string>(12,"valor").toFixed();           
+getValue2<number, string>(12,"valor").toFixed();      
+
+########################################################### Genericos con Clases
+
+class miClase<Tipo> {
+    private propiedad: Tipo;
+    constructor(contenido: Tipo){
+        this.contenido = contenido;
+    }
+}
+
+let miObjeto = new miClase<string>("contenido");
